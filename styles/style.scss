@@ -21,12 +21,23 @@ main {
   max-width: 1000px;
   display: flex;
   flex-direction: column;
+
+  @include m.mobile {
+    width: 100%;
+    padding: 0.5em;
+  }
 }
 
 .container {
   @include m.flex-center;
   flex-direction: column;
   margin-top: 100px;
+  @include m.mobile {
+    margin-top: 50%;
+  }
+  @include m.large-tablet {
+    margin-top: 40%;
+  }
 }
 
 .inputField,
@@ -34,10 +45,20 @@ main {
   @include m.flex-center;
   width: 50%;
   height: 100px;
+  @include m.mobile {
+    width: 90%;
+    height: 5em;
+  }
+  @include m.large-tablet {
+    width: 90%;
+  }
 
   &__textarea,
   &__result {
     @include m.input-styling;
+    @include m.mobile {
+      font-size: 18px;
+    }
   }
 }
 
@@ -49,9 +70,22 @@ main {
   height: 80%;
   user-select: none;
 
+  @include m.mobile {
+    width: 50%;
+  }
+  @include m.large-tablet {
+    width: 50%;
+  }
+
   &__translate,
   &__switch {
     @include m.button-styling;
+    @include m.mobile {
+      width: 100%;
+    }
+    @include m.large-tablet {
+      width: 60%;
+    }
   }
 }
 

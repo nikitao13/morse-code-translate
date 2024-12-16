@@ -4,8 +4,10 @@ const keys = Object.keys(translationKey);
 const values = Object.values(translationKey);
 
 export const translateEnglishToMorse = (englishString) => {
+  // handle empty string
   if (englishString === "") return "";
 
+  // handle non-alphabetic input
   if (!/^[a-zA-Z\s]+$/.test(englishString)) {
     throw new Error("invalid input");
   }
@@ -20,13 +22,17 @@ export const translateEnglishToMorse = (englishString) => {
 };
 
 export const translateMorseToEnglish = (morseString) => {
+  // handle empty string
   if (morseString === "") return "";
 
+  // handle non-morse input
   if (!/^[\.\-\s\/]+$/.test(morseString)) {
     throw new Error("invalid input");
   }
 
+  // handle extra spaces
   const normalizedMorseString = morseString.replace(/\s+/g, " ");
+
   const morseStringArr = normalizedMorseString.split(" ");
 
   return morseStringArr

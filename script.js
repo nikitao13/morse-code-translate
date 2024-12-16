@@ -19,15 +19,15 @@ translateBtn.addEventListener("click", () => {
       outputArea.value = error.message;
     }
   } else {
-    outputArea.value = "enter a word";
+    outputArea.value = `enter word to be translated into ${mode}`;
   }
 });
 
 switchBtn.addEventListener("click", () => {
   mode === "morse" ? (mode = "english") : (mode = "morse");
   mode === "morse"
-    ? (modeTitle.textContent = "english to morse code")
-    : (modeTitle.textContent = "morse code to english");
+    ? (modeTitle.innerText = "english to morse code")
+    : (modeTitle.innerText = "morse code to english");
   const inputVal = inputArea.value;
   const outputVal = outputArea.value;
   outputArea.value = inputVal;
