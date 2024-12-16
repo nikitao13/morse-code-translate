@@ -1,0 +1,60 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include m.flex-center;
+  height: 100vh;
+  font-family: v.$font-stack;
+  background-color: v.$primary-bg-color;
+  color: v.$text-color;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+main {
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  @include m.flex-center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.inputField,
+.outputField {
+  @include m.flex-center;
+  width: 50%;
+  height: 100px;
+
+  &__textarea,
+  &__result {
+    @include m.input-styling;
+  }
+}
+
+.buttons {
+  @include m.flex-center;
+  flex-direction: column;
+  gap: 10px;
+  width: 23.33%;
+  height: 80%;
+  user-select: none;
+
+  &__translate,
+  &__switch {
+    @include m.button-styling;
+  }
+}
+
+.mode-title {
+  margin-bottom: 35px;
+}

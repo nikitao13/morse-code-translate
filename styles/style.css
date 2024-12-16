@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #333333;
+  color: lightgray;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+main {
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.inputField,
+.outputField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+}
+.inputField__textarea, .inputField__result,
+.outputField__textarea,
+.outputField__result {
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding-left: 10px;
+  border: 2px solid rgba(211, 211, 211, 0.662);
+  outline: none;
+  background-color: transparent;
+  color: lightgray;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 23.33%;
+  height: 80%;
+  user-select: none;
+}
+.buttons__translate, .buttons__switch {
+  width: 55%;
+  font-size: 16px;
+  background-color: #333333;
+  color: rgba(211, 211, 211, 0.85);
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.mode-title {
+  margin-bottom: 35px;
+}
+
+/*# sourceMappingURL=style.css.map */
