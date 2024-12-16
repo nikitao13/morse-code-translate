@@ -26,12 +26,18 @@ export const translateMorseToEnglish = (morseString) => {
     throw new Error("invalid input");
   }
 
-  const morseStringArr = morseString.split(" ");
+  const normalizedMorseString = morseString.replace(/\s+/g, " ");
+  const morseStringArr = normalizedMorseString.split(" ");
+
   return morseStringArr
     .map((str) => {
       if (str === "/") return " ";
+      if (str === "") return "";
       const index = values.indexOf(str);
-      return index !== -1 ? keys[index] : "";
+      if (index === -1) {
+        throw new Error("invalid input");
+      }
+      return keys[index];
     })
     .join("")
     .toLowerCase();
