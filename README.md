@@ -54,5 +54,6 @@ Morse Translate is a simple, intuitive web application that allows users to conv
 
 ## Future Improvements
 - Add support for numbers
+- Auto detect language
 - Implement copy-to-clipboard functionality
 - Add sound playback for Morse code
