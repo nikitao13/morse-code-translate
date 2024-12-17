@@ -20,6 +20,7 @@ export const translationKey = {
   S: "...",
   T: "-",
   U: "..-",
+  V: "...-",
   W: ".--",
   X: "-..-",
   Y: "-.--",
